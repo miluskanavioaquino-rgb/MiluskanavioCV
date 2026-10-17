@@ -30,12 +30,13 @@
 @media(max-width:650px){.art-caption{left:15px;right:auto;bottom:15px;max-width:calc(100% - 30px);gap:10px;padding:10px 12px;font-size:12px}}
 .hero-art{width:92%;justify-self:center}
 @media(max-width:650px){.hero-art{width:100%}}
-@media(min-width:1000px){.hero-art{clip-path:inset(0 calc(50% - min(32%, 160px) - 19px) 0 0)}.art-topline{right:calc(50% - min(32%, 160px) - 3px)}}
+@media(min-width:1000px){.hero-art{clip-path:inset(0 calc(50% - min(32%, 160px) - 19px) 0 0 round 5px)}.art-topline{right:calc(50% - min(32%, 160px) - 3px)}}
 
-/* Hover discreto para las imágenes */
-img{transition:opacity .25s ease}
-@media(hover:hover){img:hover{opacity:.9}}
-@media(prefers-reduced-motion:reduce){img{transition:none}}
+/* Hover editorial y sutil en la portada */
+.hero-art{border:1px solid rgba(229,215,196,.24);border-radius:5px;transition:all .4s ease}
+.hero-photo{filter:brightness(1);transform:translateX(-50%) scale(1);transition:all .4s ease}
+@media(hover:hover){.hero-art:has(.hero-photo:hover){transform:translateY(-2px);box-shadow:0 10px 22px rgba(38,48,29,.18)}.hero-photo:hover{transform:translateX(-50%) scale(1.03);filter:brightness(1.04) saturate(1.02)}}
+@media(prefers-reduced-motion:reduce){.hero-art,.hero-photo{transition:none}}
 
 
 
