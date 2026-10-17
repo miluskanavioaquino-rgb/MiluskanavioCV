@@ -32,6 +32,12 @@
 @media(max-width:650px){.hero-art{width:100%}}
 @media(min-width:1000px){.hero-art{clip-path:inset(0 calc(50% - min(32%, 160px) - 19px) 0 0)}.art-topline{right:calc(50% - min(32%, 160px) - 3px)}}
 
+/* Hover discreto para las imágenes */
+img{transition:opacity .25s ease}
+@media(hover:hover){img:hover{opacity:.9}}
+@media(prefers-reduced-motion:reduce){img{transition:none}}
+
+
 
 
 
